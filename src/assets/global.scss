@@ -1,0 +1,6 @@
+// Override Bootstrap's $danger variable
+$danger: #E50913;
+$dark: #111 !default;
+$secondary: #2D2D2D;
+
+@import "bootstrap/scss/bootstrap";
