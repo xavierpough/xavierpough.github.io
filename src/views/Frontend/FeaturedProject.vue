@@ -1,6 +1,6 @@
 <script setup>
-import Calculator from '@/components/Frontend/Calculator.vue';
-import { ref } from 'vue';
+import Calculator from "@/components/Frontend/Calculator.vue";
+import { ref } from "vue";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
@@ -77,10 +77,10 @@ const showCalculator = ref(false);
                   <i class="fa-brands fa-css3-alt"></i>
                 </div>
 
-                <router-link to="#" class="btn btn-danger mt-2">
+                <a href="https://github.com/xavierpough/Investution-App" class="btn btn-danger mt-2">
                   View Project&nbsp;
                   <i class="fa-brands fa-github"></i>
-                </router-link>
+                </a>
               </div>
             </div>
           </div>
@@ -90,9 +90,7 @@ const showCalculator = ref(false);
         <div class="col-sm-6 col-lg-4">
           <div class="card bg-dark text-white h-100">
             <div class="card-body d-flex flex-column">
-              <h3 class="card-title h5 fw-bold mb-0">
-                Javascript Calculator
-              </h3>
+              <h3 class="card-title h5 fw-bold mb-0">Javascript Calculator</h3>
 
               <div class="d-flex align-items-center mt-1">
                 <span
@@ -136,20 +134,20 @@ const showCalculator = ref(false);
                 </div>
 
                 <a
-            href="#calculator-modal"
-            data-fancybox
-            class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
-            title="Test the calculator"
-            style="font-size: 30px"
-            @click="showCalculator = true"
-          >
+                  href="#calculator-modal"
+                  data-fancybox
+                  class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
+                  title="Test the calculator"
+                  style="font-size: 30px"
+                  @click="showCalculator = true"
+                >
                   <i class="fa-solid fa-circle-play"></i>
                 </a>
 
-                <router-link to="#" class="btn btn-danger">
+                <a href="https://github.com/xavierpough/Javascript-Calculator" class="btn btn-danger">
                   View Project&nbsp;
                   <i class="fa-brands fa-github"></i>
-                </router-link>
+                </a>
               </div>
             </div>
           </div>
@@ -246,12 +244,15 @@ const showCalculator = ref(false);
   </section>
 
   <!-- Hidden calculator modal content -->
-  <div v-if="showCalculator" style="display: none;">
-    <div id="calculator-modal" class="p-0" style="background-color: transparent;">
+  <div v-if="showCalculator" style="display: none">
+    <div
+      id="calculator-modal"
+      class="p-0"
+      style="background-color: transparent"
+    >
       <Calculator />
     </div>
   </div>
-
 </template>
 
 <style scoped>
