@@ -8,7 +8,6 @@ import './assets/global.scss'
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-
 const app = createApp(App)
 
 app.use(router)
