@@ -77,7 +77,7 @@ const showCalculator = ref(false);
                   <i class="fa-brands fa-css3-alt"></i>
                 </div>
 
-                <a href="https://github.com/xavierpough/Investution-App" class="btn btn-danger mt-2">
+                <a href="https://github.com/xavierpough/Investution-App" class="btn btn-danger mt-2 disabled">
                   View Project&nbsp;
                   <i class="fa-brands fa-github"></i>
                 </a>
