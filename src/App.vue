@@ -4,6 +4,7 @@ import ResumeNavBar from "./components/ResumeNavBar.vue";
 </script>
 
 <template>
+  <!-- Testing -->
   <div class="d-flex flex-column min-vh-100 text-white bg-dark">
   <ResumeNavBar/>
     <main class="flex-grow-1">
