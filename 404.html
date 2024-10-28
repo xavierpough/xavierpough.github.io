@@ -7,6 +7,7 @@
     <script>
         // Redirect to the correct Vue Router path
         var path = window.location.pathname;
+        console.log("path: ", path);
         if (path !== '/404.html') {
             window.location.href = path; // Redirect to the subpath
         }
