@@ -71,14 +71,15 @@ const showCalculator = ref(false);
                 class="d-flex align-items-center justify-content-between mt-auto"
               >
                 <!-- Button Section -->
-                <a
-                  href="/apple-hub"
+                <RouterLink
+                  to="/apple-hub"
                   class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
                   title="Go To Apple Hub"
                   style="font-size: 30px"
                 >
                   <i class="fa-solid fa-circle-play"></i>
-                </a>
+                </RouterLink>
+
                 <!-- Icons Section -->
                 <div>
                   <i class="fa-brands fa-vuejs me-2"></i>
