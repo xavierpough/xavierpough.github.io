@@ -3,6 +3,7 @@ import Calculator from "@/components/Frontend/Calculator.vue";
 import { ref } from "vue";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { RouterLink } from "vue-router";
 
 const showCalculator = ref(false);
 </script>
