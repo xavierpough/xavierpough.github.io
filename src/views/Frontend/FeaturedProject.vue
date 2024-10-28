@@ -36,7 +36,7 @@ const showCalculator = ref(false);
                 class="d-flex align-items-center justify-content-center py-2"
               >
                 <img
-                  src="/src/images/HubHomeMockup.png"
+                  src="/src/images/apple/HubHomeMockup.png"
                   alt="Investuition App Logo"
                   class="card-img-top rounded me-3"
                   style="object-fit: cover; height: 250px; width: auto"

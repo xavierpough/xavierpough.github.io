@@ -3,44 +3,38 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <!-- Marketplace and Smart Goal Section -->
-  <section class="promo-section container">
-    <!-- Card: Marketplace for Services & Micro-Gigs -->
-    <div class="promo-card promo-card-bg">
-      <div class="row">
-        <div class="col-8">
+    <!-- Marketplace and Smart Goal Section -->
+    <section class="promo-section container">
+      <!-- Card: Marketplace for Services & Micro-Gigs -->
+      <div class="promo-card promo-card-bg">
+        <div class="row align-items-center">
+          <div class="col-8">
             <h3 class="card-title">Thank You!</h3>
             <p>Be sure to stay on the lookout for updates to <i class="fa-brands fa-apple"></i> Hub.</p>
             <div class="small">Xavier Pough</div>
             <div class="small fw-light">Software Engineer | UX Designer | UI Engineer</div>
-
             <div class="small">
-                <p><span><i class="small fa-regular fa-envelope"></i></span> &nbsp;xavierpough@gmail.com</p>
+              <p><span><i class="small fa-regular fa-envelope"></i></span> &nbsp;xavierpough@gmail.com</p>
             </div>
-        </div>
-        <div class="col-4 text-end">
-          <img
-            src="/src/images/XavierPoughMemoji2.png"
-            alt="Gainz United App Logo"
-            class="card-image"
-          />
+          </div>
+          <div class="col-4 text-end">
+            <img
+              src="/src/images/apple/XavierPoughMemoji.png"
+              alt="Gainz United App Logo"
+              class="card-image"
+            />
+          </div>
         </div>
       </div>
-      <!-- <h3 class="card-title">Thank You!</h3>
-        <img
-          src="/src/images/XavierPoughMemoji2.png"
-          alt="Gainz United App Logo"
-          class="card-image"
-        /> -->
-    </div>
-  </section>
-</template>
+    </section>
+  </template>
+  
 
 <style scoped>
 /* General Styles */
 .promo-section {
   background-color: #f5f5f7;
-  padding: 40px 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,8 +49,9 @@ import { ref } from "vue";
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-  padding: 40px;
-  max-height: 15rem;
+  padding: 20px 30px; /* Adjusted padding for more room inside the card */
+
+  width: 100%; /* Make the card responsive */
 }
 
 .promo-card:hover {
@@ -71,8 +66,7 @@ import { ref } from "vue";
 }
 
 .card-title {
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", sans-serif;
   font-size: 2rem;
 }
 
@@ -88,8 +82,7 @@ import { ref } from "vue";
   height: auto;
   max-height: 200px;
   object-fit: contain;
-  /* border-radius: 16px; */
-  margin: 20px auto;
+  margin-top: 20px;
 }
 
 .thanks-text {
@@ -103,4 +96,5 @@ import { ref } from "vue";
   background-clip: text;
   text-fill-color: transparent;
 }
+
 </style>

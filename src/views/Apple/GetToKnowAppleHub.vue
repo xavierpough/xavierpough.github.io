@@ -13,21 +13,21 @@ const widgetsCard = ref({ expanded: false });
 </script>
 
 <template>
-  <!-- Marketplace and Smart Goal Section -->
-   <h1 class="section-title container">Get To Know Apple Hub</h1>
+  <h1 class="section-title container">Get To Know Apple Hub</h1>
   <section class="promo-section">
     <div class="promo-container">
       <!-- Card 1: Marketplace for Services & Micro-Gigs -->
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': marketplaceCard.expanded }"
-        :style="{ backgroundImage: marketplaceCard.expanded ?  '' : `url('/src/images/MarketplaceWithHub.jpg')` }">
+        :style="{ backgroundImage: marketplaceCard.expanded ? '' : `url('/src/images/apple/MarketplaceWithHub.jpg')` }"
+      >
         <h3 class="card-title">Marketplace for Services & Micro-Gigs</h3>
-        <p class="card-text" :style="{visibility: marketplaceCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: marketplaceCard.expanded ? '' : 'hidden' }">
           Offer or hire small services—like tutoring, dog walking, or
           photography—right from the app.
         </p>
-        <p class="card-text" :style="{visibility: marketplaceCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: marketplaceCard.expanded ? '' : 'hidden' }">
           Payments are seamless with Apple Pay, encouraging Wallet use and
           making every transaction effortless.
         </p>
@@ -41,18 +41,18 @@ const widgetsCard = ref({ expanded: false });
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': goalTrackerCard.expanded }"
-        :style="{backgroundImage: goalTrackerCard.expanded ? '' : `url('/src/images/SetWorkoutsWithHub.jpg')`}"
+        :style="{ backgroundImage: goalTrackerCard.expanded ? '' : `url('/src/images/apple/SetWorkoutsWithHub.jpg')` }"
       >
         <h3 class="card-title">Smart Goal Tracker & Rewards</h3>
-        <p class="card-text" :style="{visibility: goalTrackerCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: goalTrackerCard.expanded ? '' : 'hidden' }">
           Set personal, fitness, or financial goals—like "Save $500" or "Walk 5K
           every day."
         </p>
-        <p class="card-text" :style="{visibility: goalTrackerCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: goalTrackerCard.expanded ? '' : 'hidden' }">
           Unlock rewards such as exclusive wallpapers, App Store credits, or
           Apple Music discounts.
         </p>
-        <p class="card-text" :style="{visibility: goalTrackerCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: goalTrackerCard.expanded ? '' : 'hidden' }">
           Syncs with Apple Health, Wallet, and the latest savings features to
           keep you motivated.
         </p>
@@ -62,14 +62,14 @@ const widgetsCard = ref({ expanded: false });
         </button>
       </div>
 
-      <!-- Card 3: Smart Goal Tracker & Rewards -->
+      <!-- Card 3: Interactive Lock Screen Widgets -->
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': widgetsCard.expanded }"
-        :style="{backgroundImage: widgetsCard.expanded ? '' : `url('/src/images/iPhoneWidgets.png')`}"
+        :style="{ backgroundImage: widgetsCard.expanded ? '' : `url('/src/images/apple/iOSWidgets.png')` }"
       >
         <h3 class="card-title">Interactive Lock Screen Widgets</h3>
-        <p class="card-text" :style="{visibility: widgetsCard.expanded ? '' : 'hidden'}">
+        <p class="card-text" :style="{ visibility: widgetsCard.expanded ? '' : 'hidden' }">
           Live widgets for your day’s events, goals, and upcoming social plans
           to keep users checking their phones frequently.
         </p>
@@ -152,7 +152,7 @@ const widgetsCard = ref({ expanded: false });
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Slight black overlay by default */
+  background: rgba(0, 0, 0, 0.5); /* Slight black overlay by default */
   border-radius: 24px;
   z-index: 0;
   transition: background 0.3s ease;

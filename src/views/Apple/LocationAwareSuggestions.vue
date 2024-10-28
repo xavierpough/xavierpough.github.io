@@ -12,7 +12,7 @@
   
       <!-- Image at Bottom -->
       <img
-        src="/src/images/Hub Dynamic Island.png"
+        src="/src/images/apple/HubDynamicIsland.png"
         alt="Dynamic Island Screenshot"
         class="bottom-image"
       />

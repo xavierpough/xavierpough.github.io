@@ -72,17 +72,17 @@ import LocationAwareSuggestions from './LocationAwareSuggestions.vue';
         <!-- Devices Display -->
         <div class="devices-container">
             <img
-            src="/src/images/Hub Marketplace Mockup.png"
+            src="/src/images/apple/HubMarketplaceMockup.png"
             class="device-image"
             alt="Apple Hub Marketplace"
           />
           <img
-            src="/src/images/HubHomeMockup.png"
+            src="/src/images/apple/HubHomeMockup.png"
             class="device-image"
             alt="Apple HUB Intro"
           />
           <img
-            src="/src/images/Hub Communities Mockup.png"
+            src="/src/images/apple/HubCommunitiesMockup.png"
             class="device-image"
             alt="Apple HUB Intro"
           />
@@ -122,7 +122,7 @@ import LocationAwareSuggestions from './LocationAwareSuggestions.vue';
                   Adjusts your plans based on changing events.
                 </p>
                 <img
-                  src="/src/images/Hub Planner Mockup.png"
+                  src="/src/images/apple/HubPlannerMockup.png"
                   alt="Genmoji Screenshot"
                   class="img-fluid"
                 />
