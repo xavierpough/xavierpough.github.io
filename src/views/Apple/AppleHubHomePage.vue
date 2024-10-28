@@ -185,7 +185,9 @@ import LocationAwareSuggestions from './LocationAwareSuggestions.vue';
         </div>
       </div>
 
-      <GetToKnowXavier class="justify-content-center"/>
+      <div class="container">
+        <GetToKnowXavier/>
+      </div>
       <div class="container text-black pb-4"> <a href="/"><i class="small fa-solid fa-chevron-left"></i> Return Back To Portfolio </a></div>
     </div>
   </section>
