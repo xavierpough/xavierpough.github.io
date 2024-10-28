@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
 const frontendLinks = ref([
   'home',
@@ -11,16 +12,31 @@ const actorLinks = ref([
   'actor-resume'
 ])
 
+const appleTheme = ref(false);
+const route = useRoute(); // Access route object
+watch(
+  () => route.path,
+  (newPath) => {
+    appleTheme.value = newPath.includes('/apple-hub'); // Toggle theme
+  },
+  { immediate: true } // Run immediately on mount
+);
+
+console.log("appleTheme: ", appleTheme)
 </script>
 
 <template>
-  <nav id="portfolio-navbar">
+  <nav id="portfolio-navbar" :style="{backgroundColor: appleTheme ?  '#6c757d' : ''}">
+
     <ul class="nav nav-tabs small border-bottom-0" style="font-size: 10px">
     <li class="nav-item">
       <!-- {{ $route.name }} -->
-      <RouterLink class="nav-link border-0" aria-current="page" to="/" :class="{ active: frontendLinks.includes($route.name) }">Frontend Developer</RouterLink>
+      <RouterLink class="nav-link border-0" aria-current="page" to="/" :class="{ active: frontendLinks.includes($route.name) }">
+        <span v-if="appleTheme" class="ms-3 ">View My Portfolio Here</span>
+        <span v-else>Frontend Developer</span>
+      </RouterLink>
     </li>
-    <li class="nav-item">
+    <li v-if="!appleTheme" class="nav-item">
       <RouterLink class="nav-link border-0" aria-current="page" to="/actor" :class="{ active: actorLinks.includes($route.name) }"
         >Actor</RouterLink>
     </li>

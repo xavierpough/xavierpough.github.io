@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/Frontend/HomeView.vue'
 import ActorHomePage from '@/views/Actor/ActorHomePage.vue'
 import FrontEndResume from '@/components/Frontend/FrontEndResume.vue'
+import AppleHubHomePage from '@/views/Apple/AppleHubHomePage.vue'
 
 
 const router = createRouter({
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/actor',
       name: 'actor',
       component: ActorHomePage
+    },
+    {
+      path: '/apple-hub',
+      name: 'apple-hub',
+      component: AppleHubHomePage
     },
     
     // {

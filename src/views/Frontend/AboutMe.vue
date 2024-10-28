@@ -17,7 +17,7 @@ const scrollToContact = () => {
           <h2 class="h3 fw-bold mb-4">About Me</h2>
           <p class="text-white mb-4">
             Hi, I'm Xavier Pough, a front-end developer with a strong foundation
-            in computer science and a passion for artistry. Web development is
+            in computer science and a passion for artistry. UI engineering is
             more than just code to me—it's a canvas for creativity. With a
             Bachelor's of Science in Computer Science from Charleston Southern
             University, I combine technical expertise with an artistic eye to

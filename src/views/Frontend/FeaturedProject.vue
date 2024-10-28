@@ -12,6 +12,85 @@ const showCalculator = ref(false);
     <div class="container-fluid">
       <h2 class="h3 fw-bold mb-4">Featured Projects</h2>
       <div class="row g-4">
+        <!-- Apple Hub -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="card bg-dark text-white h-100 d-flex flex-column">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5 fw-bold mb-0">
+                Apple Hub (Concept) <i class="fa-brands fa-apple"></i>
+              </h3>
+
+              <div class="d-flex align-items-center mt-1">
+                <span
+                  class="text-black px-2 d-inline-block bg-white rounded-2"
+                  style="font-size: 8px"
+                >
+                  VIEW BELOW <i class="fa-solid fa-play ms-1"></i>
+                </span>
+              </div>
+
+              
+
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="/src/images/HubHomeMockup.png"
+                  alt="Investuition App Logo"
+                  class="card-img-top rounded me-3"
+                  style="object-fit: cover; height: 250px; width: auto"
+                />
+              </div>
+
+              <p class="card-text text-white mb-1 small">
+                I've always admired Apple's websites for their creativity, uniqueness, 
+                and captivating design. Inspired by the release of Apple Intelligence, 
+                I envisioned a productivity app that leverages its capabilities while 
+                introducing a fresh set of tools. I designed and developed a basic web 
+                app that embodies the Apple aesthetic, providing a glimpse into my concept. 
+                <!-- Apple Hub is an all-in-one lifestyle platform exclusive to Apple
+                devices that combines Apple Intelligence-powered personal
+                planning, social experiences, and local discovery to make users
+                more engaged with their devices throughout the day. It blends
+                productivity, community engagement, and seamless integration
+                with Apple services to encourage constant use. -->
+              </p>
+              <p class="fst-italic" style="font-size: 10px">
+                Disclaimer: This project is not affiliated with, endorsed by, or
+                connected to Apple Inc. in any way. All Apple-related
+                trademarks, logos, and designs are the property of Apple Inc.
+                and are used here solely for demonstration and prototype
+                purposes. This demo is intended to showcase design concepts and
+                has no commercial intent or ownership claims over any Apple
+                intellectual property.
+              </p>
+
+
+              <!-- This section will remain at the bottom of the card -->
+              <div
+                class="d-flex align-items-center justify-content-between mt-auto"
+              >
+                <!-- Button Section -->
+                <a
+                  href="/apple-hub"
+                  class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
+                  title="Go To Apple Hub"
+                  style="font-size: 30px"
+                >
+                  <i class="fa-solid fa-circle-play"></i>
+                </a>
+                <!-- Icons Section -->
+                <div>
+                  <i class="fa-brands fa-vuejs me-2"></i>
+                  <i class="fa-brands fa-html5 me-2"></i>
+                  <i class="fa-brands fa-css3-alt me-2"></i>
+                  <i class="fa-brands fa-bootstrap"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Investuition App -->
         <div class="col-sm-6 col-lg-4">
           <div class="card bg-dark text-white h-100 d-flex flex-column">
@@ -70,17 +149,23 @@ const showCalculator = ref(false);
               </p>
 
               <!-- This section will remain at the bottom of the card -->
-              <div class="mt-auto">
-                <div class="text-end">
+              <div
+                class="d-flex align-items-center justify-content-between mt-auto"
+              >
+                <!-- Button Section -->
+                <a
+                  href="https://github.com/xavierpough/Investution-App"
+                  class="btn btn-danger disabled"
+                >
+                  View Project&nbsp;
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <!-- Icons Section -->
+                <div>
                   <i class="fa-brands fa-react me-2"></i>
                   <i class="fa-brands fa-node me-2"></i>
                   <i class="fa-brands fa-css3-alt"></i>
                 </div>
-
-                <a href="https://github.com/xavierpough/Investution-App" class="btn btn-danger mt-2 disabled">
-                  View Project&nbsp;
-                  <i class="fa-brands fa-github"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -97,7 +182,7 @@ const showCalculator = ref(false);
                   class="text-black px-2 d-inline-block bg-white rounded-2"
                   style="font-size: 8px"
                 >
-                  TEST BELOW <i class="fa-solid fa-play ms-1"></i>
+                  VIEW BELOW <i class="fa-solid fa-play ms-1"></i>
                 </span>
               </div>
 
@@ -126,14 +211,13 @@ const showCalculator = ref(false);
                 user-friendly interface.
               </p>
 
-              <div class="mt-auto">
-                <div class="text-end">
-                  <i class="fa-brands fa-js me-2"></i>
-                  <i class="fa-brands fa-html5 me-2"></i>
-                  <i class="fa-brands fa-css3-alt"></i>
-                </div>
-
-                <a
+              <!-- This section will remain at the bottom of the card -->
+              <div
+                class="d-flex align-items-center justify-content-between mt-auto"
+              >
+                <!-- Button Section -->
+                <div>
+                  <a
                   href="#calculator-modal"
                   data-fancybox
                   class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
@@ -144,10 +228,20 @@ const showCalculator = ref(false);
                   <i class="fa-solid fa-circle-play"></i>
                 </a>
 
-                <a href="https://github.com/xavierpough/Javascript-Calculator" class="btn btn-danger">
+                <a
+                  href="https://github.com/xavierpough/Javascript-Calculator"
+                  class="btn btn-danger"
+                >
                   View Project&nbsp;
                   <i class="fa-brands fa-github"></i>
                 </a>
+                </div>
+                <!-- Icons Section -->
+                <div>
+                  <i class="fa-brands fa-js me-2"></i>
+                  <i class="fa-brands fa-html5 me-2"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
               </div>
             </div>
           </div>
