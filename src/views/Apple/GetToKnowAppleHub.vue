@@ -20,7 +20,7 @@ const widgetsCard = ref({ expanded: false });
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': marketplaceCard.expanded }"
-        :style="{ backgroundImage: marketplaceCard.expanded ? '' : `url('/src/images/apple/MarketplaceWithHub.jpg')` }"
+        :style="{ backgroundImage: marketplaceCard.expanded ? '' : `url('/images/apple/MarketplaceWithHub.jpg')` }"
       >
         <h3 class="card-title">Marketplace for Services & Micro-Gigs</h3>
         <p class="card-text" :style="{ visibility: marketplaceCard.expanded ? '' : 'hidden' }">
@@ -41,7 +41,7 @@ const widgetsCard = ref({ expanded: false });
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': goalTrackerCard.expanded }"
-        :style="{ backgroundImage: goalTrackerCard.expanded ? '' : `url('/src/images/apple/SetWorkoutsWithHub.jpg')` }"
+        :style="{ backgroundImage: goalTrackerCard.expanded ? '' : `url('/images/apple/SetWorkoutsWithHub.jpg')` }"
       >
         <h3 class="card-title">Smart Goal Tracker & Rewards</h3>
         <p class="card-text" :style="{ visibility: goalTrackerCard.expanded ? '' : 'hidden' }">
@@ -66,7 +66,7 @@ const widgetsCard = ref({ expanded: false });
       <div
         class="promo-card promo-card-bg"
         :class="{ 'expanded': widgetsCard.expanded }"
-        :style="{ backgroundImage: widgetsCard.expanded ? '' : `url('/src/images/apple/iOSWidgets.png')` }"
+        :style="{ backgroundImage: widgetsCard.expanded ? '' : `url('/images/apple/iOSWidgets.png')` }"
       >
         <h3 class="card-title">Interactive Lock Screen Widgets</h3>
         <p class="card-text" :style="{ visibility: widgetsCard.expanded ? '' : 'hidden' }">
