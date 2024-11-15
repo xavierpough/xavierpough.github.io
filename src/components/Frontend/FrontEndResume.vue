@@ -14,7 +14,7 @@ const resume = {
   linkedin: "https://www.linkedin.com/in/xavier-pough-b8a4ba174/",
   github: "https://www.github.com/xavierpough",
   website: "https://www.xavierpough.com",
-  bio: "Innovative UX Engineer and Front-End Developer with a strong background in designing and implementing user-centered web applications. Proficient in modern JavaScript frameworks like React and Angular, with expertise in creating intuitive, responsive, and visually compelling interfaces. Adept at bridging the gap between design and development, ensuring seamless user experiences and delivering high-quality, maintainable code.",
+  bio: "Innovative Software & UI Engineer with a strong background in designing and implementing user-centered web applications. Proficient in modern JavaScript frameworks like React and Angular, with expertise in creating intuitive, responsive, and visually compelling interfaces. Adept at bridging the gap between design and development, ensuring seamless user experiences and delivering high-quality, maintainable code.",
   education: [
     {
       degree: "Bachelor of Science in Computer Science",
@@ -76,10 +76,10 @@ const resume = {
   ],
   experiences: [
     {
-      title: "Frontend Developer",
+      title: "Software Engineer",
       subtitle: "Telrite Holdings",
       role: "Atlanta, GA",
-      duration: "Aug 2022 - July 2024",
+      duration: "Aug 2021 - July 2024",
       details: [
         "Developed and maintained responsive, data-intensive web applications using Vue.js and React, enhancing user interaction and experience.",
         "Created reusable components and optimized UI patterns for scalability, leading to a 30% reduction in development time for new features.",
@@ -87,7 +87,7 @@ const resume = {
       ],
     },
     {
-      title: "UX Engineer & Designer",
+      title: "UI Engineer & Designer",
       subtitle: "Freelance",
       role: "Remote",
       duration: "Dec 2020 - Present",
@@ -98,7 +98,7 @@ const resume = {
       ],
     },
     {
-      title: "Graphic Design Intern",
+      title: "Software Engineer Intern - Frontend",
       subtitle: "Custom Development Solutions",
       role: "Charleston, SC",
       duration: "May 2019 - May 2020",
