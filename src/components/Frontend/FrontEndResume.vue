@@ -75,6 +75,17 @@ const resume = {
     "Mentioned on Wall Street Journal"
   ],
   experiences: [
+  {
+      title: "Specialist",
+      subtitle: "Apple Inc.",
+      role: "Atlanta, GA",
+      duration: "Aug 2024 - Present",
+      details: [
+        "Provided technical support and customer service, resolving issues with a 95% satisfaction rate.",
+        "Assisted customers in diagnosing and resolving technical issues with Apple devices, ensuring satisfaction while maintaining a focus on technical accuracy.",
+        "Leveraged in-depth knowledge of macOS, iOS, and Apple apps to recommend and demonstrate technology solutions to customers."
+      ],
+    },
     {
       title: "Software Engineer",
       subtitle: "Telrite Holdings",
