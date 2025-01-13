@@ -6,15 +6,66 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { RouterLink } from "vue-router";
 
 const showCalculator = ref(false);
+
+// Reference to the scroll container
+const scrollContainer = ref(null);
+
+// Handle infinite scrolling
+const moveCardToEnd = () => {
+  if (scrollContainer.value) {
+    const firstCard = scrollContainer.value.querySelector(".project-card");
+    if (firstCard) {
+      scrollContainer.value.appendChild(firstCard); // Move the first card to the end
+      scrollContainer.value.scrollBy({ left: -firstCard.offsetWidth, behavior: "instant" });
+    }
+  }
+};
+
+const moveCardToStart = () => {
+  if (scrollContainer.value) {
+    const lastCard = scrollContainer.value.querySelector(".project-card:last-child");
+    if (lastCard) {
+      scrollContainer.value.prepend(lastCard); // Move the last card to the start
+      scrollContainer.value.scrollBy({ left: lastCard.offsetWidth, behavior: "instant" });
+    }
+  }
+};
+
+const scrollRight = () => {
+  if (scrollContainer.value) {
+    const cardWidth = scrollContainer.value.querySelector(".project-card")?.offsetWidth || 0;
+    scrollContainer.value.scrollBy({ left: cardWidth, behavior: "smooth" });
+
+    // Wait for the scroll to complete, then reorder cards
+    setTimeout(() => moveCardToEnd(), 300);
+  }
+};
+
+const scrollLeft = () => {
+  if (scrollContainer.value) {
+    const cardWidth = scrollContainer.value.querySelector(".project-card")?.offsetWidth || 0;
+    scrollContainer.value.scrollBy({ left: -cardWidth, behavior: "smooth" });
+
+    // Wait for the scroll to complete, then reorder cards
+    setTimeout(() => moveCardToStart(), 300);
+  }
+};
 </script>
 
 <template>
   <section id="projects" class="py-5 bg-secondary px-4">
     <div class="container-fluid">
       <h2 class="h3 fw-bold mb-4">Featured Projects</h2>
-      <div class="row g-4">
+
+      <!-- Scrollable Row with Arrow Controls -->
+      <div class="position-relative">
+        <div
+          class="d-flex"
+          style="scroll-behavior: smooth; overflow: hidden;"
+          ref="scrollContainer"
+        >
         <!-- Apple Hub -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 project-card px-2">
           <div class="card bg-dark text-white h-100 d-flex flex-column">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold mb-0">
@@ -29,8 +80,6 @@ const showCalculator = ref(false);
                   VIEW BELOW <i class="fa-solid fa-play ms-1"></i>
                 </span>
               </div>
-
-              
 
               <div
                 class="d-flex align-items-center justify-content-center py-2"
@@ -47,7 +96,7 @@ const showCalculator = ref(false);
                 I've always admired Apple's websites for their creativity, uniqueness, 
                 and captivating design. Inspired by the release of Apple Intelligence, 
                 I envisioned a productivity app that leverages its capabilities while 
-                introducing a fresh set of tools. I designed and developed a basic web 
+                introducing a fresh set of tools. I designed and engineered a basic web 
                 app that embodies the Apple aesthetic, providing a glimpse into my concept. 
                 <!-- Apple Hub is an all-in-one lifestyle platform exclusive to Apple
                 devices that combines Apple Intelligence-powered personal
@@ -94,7 +143,7 @@ const showCalculator = ref(false);
         </div>
 
         <!-- Investuition App -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 project-card px-2">
           <div class="card bg-dark text-white h-100 d-flex flex-column">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold mb-0">
@@ -174,7 +223,7 @@ const showCalculator = ref(false);
         </div>
 
         <!-- Javascript Calulator -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 project-card px-2">
           <div class="card bg-dark text-white h-100">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold mb-0">Javascript Calculator</h3>
@@ -250,7 +299,7 @@ const showCalculator = ref(false);
         </div>
 
         <!-- Gainz United App -->
-        <div class="col-sm-6 col-lg-4">
+        <div class="col-sm-6 col-lg-4 project-card px-2">
           <div class="card bg-dark text-white h-100">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title h5 fw-bold mb-0">
@@ -335,7 +384,22 @@ const showCalculator = ref(false);
             </div>
           </div>
         </div>
+
+        <!-- Left and Right Arrow Controls -->
+        <button
+          class="position-absolute top-50 start-0 translate-middle-y btn btn-dark"
+          @click="scrollLeft"
+        >
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <button
+          class="position-absolute top-50 end-0 translate-middle-y btn btn-dark"
+          @click="scrollRight"
+        >
+          <i class="fa fa-chevron-right"></i>
+        </button>
       </div>
+    </div>
     </div>
   </section>
 
@@ -368,5 +432,40 @@ const showCalculator = ref(false);
   .card-img-top {
     height: 100px;
   }
+}
+
+button {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Make sure the cards are not wrapping and stay in a single row */
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 100px; /* Space between cards */
+}
+
+/* Card styles for consistent layout */
+.scroll-container .card {
+  height: 100%; /* Match the container height */
+  width: 100%; /* Match the container width */
+  display: flex;
+  flex-direction: column;
 }
 </style>

@@ -50,7 +50,6 @@ import { ref } from "vue";
   position: relative;
   overflow: hidden;
   padding: 20px 30px; /* Adjusted padding for more room inside the card */
-
   width: 100%; /* Make the card responsive */
 }
 

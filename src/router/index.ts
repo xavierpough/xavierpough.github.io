@@ -29,16 +29,16 @@ const router = createRouter({
       name: 'apple-hub',
       component: AppleHubHomePage
     },
-    
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      // When using the browser's back/forward button, restore saved position
+      return savedPosition;
+    } else {
+      // Scroll to top for new navigation
+      return { top: 0 };
+    }
+  },
 })
 
 export default router

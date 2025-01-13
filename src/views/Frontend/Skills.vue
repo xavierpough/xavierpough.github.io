@@ -4,17 +4,58 @@ import { ref } from "vue";
 // Reference to the scroll container
 const scrollContainer = ref(null);
 
-const scrollLeft = () => {
+// Handle infinite scrolling
+const moveCardToEnd = () => {
   if (scrollContainer.value) {
-    scrollContainer.value.scrollBy({ left: -200, behavior: "smooth" });
+    const firstCard = scrollContainer.value.querySelector(".card");
+    if (firstCard) {
+      scrollContainer.value.appendChild(firstCard); // Move the first card to the end
+      scrollContainer.value.scrollBy({ left: -firstCard.offsetWidth, behavior: "instant" });
+    }
+  }
+};
+
+const moveCardToStart = () => {
+  if (scrollContainer.value) {
+    const lastCard = scrollContainer.value.querySelector(".card:last-child");
+    if (lastCard) {
+      scrollContainer.value.prepend(lastCard); // Move the last card to the start
+      scrollContainer.value.scrollBy({ left: lastCard.offsetWidth, behavior: "instant" });
+    }
   }
 };
 
 const scrollRight = () => {
   if (scrollContainer.value) {
-    scrollContainer.value.scrollBy({ left: 200, behavior: "smooth" });
+    const cardWidth = scrollContainer.value.querySelector(".card")?.offsetWidth || 0;
+    scrollContainer.value.scrollBy({ left: cardWidth, behavior: "smooth" });
+
+    // Wait for the scroll to complete, then reorder cards
+    setTimeout(() => moveCardToEnd(), 300);
   }
 };
+
+const scrollLeft = () => {
+  if (scrollContainer.value) {
+    const cardWidth = scrollContainer.value.querySelector(".card")?.offsetWidth || 0;
+    scrollContainer.value.scrollBy({ left: -cardWidth, behavior: "smooth" });
+
+    // Wait for the scroll to complete, then reorder cards
+    setTimeout(() => moveCardToStart(), 300);
+  }
+};
+
+// const scrollLeft = () => {
+//   if (scrollContainer.value) {
+//     scrollContainer.value.scrollBy({ left: -200, behavior: "smooth" });
+//   }
+// };
+
+// const scrollRight = () => {
+//   if (scrollContainer.value) {
+//     scrollContainer.value.scrollBy({ left: 200, behavior: "smooth" });
+//   }
+// };
 </script>
 
 <template>
