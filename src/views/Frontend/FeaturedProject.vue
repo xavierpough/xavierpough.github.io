@@ -4,8 +4,10 @@ import { ref } from "vue";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { RouterLink } from "vue-router";
+import InvestuitionDemo from "@/components/Frontend/InvestuitionDemo.vue";
 
 const showCalculator = ref(false);
+const showInvestuitionDemo = ref(false);
 
 // Reference to the scroll container
 const scrollContainer = ref(null);
@@ -60,7 +62,7 @@ const scrollLeft = () => {
       <!-- Scrollable Row with Arrow Controls -->
       <div class="position-relative">
         <div
-          class="d-flex"
+          class="d-flex scroll-container"
           style="scroll-behavior: smooth; overflow: hidden;"
           ref="scrollContainer"
         >
@@ -155,8 +157,18 @@ const scrollLeft = () => {
                   class="text-black px-2 d-inline-block bg-white rounded-2"
                   style="font-size: 8px"
                 >
-                  COMING SOON
+                  DEMO BELOW
+
+                  <i class="fa-solid fa-play ms-1"></i>
                 </span>
+                <span
+                  class="text-black px-2 d-inline-block bg-white rounded-2 ms-1"
+                  style="font-size: 8px"
+                >
+                  LIGHT & DARK MODE
+                </span>
+
+                
                 <span class="ms-1" style="font-size: 12px"
                   ><i class="fa-brands fa-app-store-ios text-white"></i
                 ></span>
@@ -204,6 +216,17 @@ const scrollLeft = () => {
                 class="d-flex align-items-center justify-content-between mt-auto"
               >
                 <!-- Button Section -->
+                 <div>
+                <a
+                  href="#app-modal"
+                  data-fancybox
+                  class="btn btn-lg text-white border-0 align-items-center ps-0 pe-3 py-0"
+                  title="View Investuition App"
+                  style="font-size: 30px"
+                  @click="showInvestuitionDemo = true"
+                >
+                  <i class="fa-solid fa-circle-play"></i>
+                </a>
                 <a
                   href="https://github.com/xavierpough/Investution-App"
                   class="btn btn-danger disabled"
@@ -211,6 +234,7 @@ const scrollLeft = () => {
                   View Project&nbsp;
                   <i class="fa-brands fa-github"></i>
                 </a>
+              </div>
                 <!-- Icons Section -->
                 <div>
                   <i class="fa-brands fa-react me-2"></i>
@@ -403,6 +427,17 @@ const scrollLeft = () => {
     </div>
   </section>
 
+  <!-- Hidden Investuition App modal content -->
+  <div v-if="showInvestuitionDemo" style="display: none">
+    <div
+      id="app-modal"
+      class="p-0"
+      style="background-color: transparent"
+    >
+      <InvestuitionDemo />
+    </div>
+  </div>
+
   <!-- Hidden calculator modal content -->
   <div v-if="showCalculator" style="display: none">
     <div
@@ -416,21 +451,35 @@ const scrollLeft = () => {
 </template>
 
 <style scoped>
-@media (max-width: 992px) {
-  .card-img-top {
-    height: 150px;
-  }
+/* Force images to scale properly rather than being fixed. */
+.card-img-top {
+  width: auto;
+  height: auto;
+  max-width: 100%; /* So it doesn’t overflow its container */
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-  .card-img-top {
-    height: 125px;
+  /* Let the cards wrap on smaller screens so they stack vertically. */
+  .scroll-container {
+    flex-wrap: wrap;
+    overflow-x: auto; /* So they can still swipe horizontally if needed,
+                         but in most cases they’ll just wrap. */
   }
-}
 
-@media (max-width: 576px) {
-  .card-img-top {
-    height: 100px;
+  /* Make each project card 100% wide (one per row). */
+  .project-card {
+    flex: 0 0 100%;
+    /* Or if you still want two cards per row on certain small screens:
+       flex: 0 0 50%; 
+    */
+    margin-bottom: 1rem;
+  }
+
+  /* Hide the arrow buttons on small screens (where horizontal swiping is easier). */
+  .position-absolute.top-50.start-0,
+  .position-absolute.top-50.end-0 {
+    display: none;
   }
 }
 
@@ -455,10 +504,10 @@ button:hover {
 }
 
 .scroll-container {
-  display: flex;
-  overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 100px; /* Space between cards */
+  /* On larger screens, you can keep overflow hidden for the arrow scroll effect */
+  overflow-x: hidden;
+  gap: 1rem;
 }
 
 /* Card styles for consistent layout */
