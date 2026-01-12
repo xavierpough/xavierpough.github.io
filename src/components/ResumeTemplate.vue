@@ -102,10 +102,22 @@ const props = defineProps({
         </div>
 
         <div class="row pb-2">
-          <button class="col-auto bg-white ms-2 mx-1 text-black border-0">
+          <button v-if="resume.type !== 'Actors'" class="col-auto bg-white ms-2 mx-1 text-black border-0">
             <i class="fa-solid fa-circle-play"></i> Play
-            <span v-if="resume.type === 'Actors'">Demo</span>
           </button>
+
+
+              <a v-if="resume.type === 'Actors'"
+                style="text-decoration: none;"
+                :href="resume.play_link"
+                data-fancybox
+                data-type="iframe"
+                class="col-auto bg-white ms-2 mx-1 text-black border-0"
+                title="Play Reel"
+              >
+                <i class="fa-solid fa-circle-play"></i> Play Demo
+              </a>
+
           <button
             class="col-auto mx-1 text-secondary border-0"
             style="background-color: #818589"
@@ -113,6 +125,7 @@ const props = defineProps({
             <i class="fa-solid fa-plus"></i> More Info
           </button>
         </div>
+
       </div>
 
       <!-- Bio -->
@@ -296,8 +309,13 @@ const props = defineProps({
             <!-- Details / Description -->
             <div class="mt-2 small">
               <div>
+                <a class="border-top border-start border-end px-2" 
+                    v-if="job.subtitle_link" 
+                    :href="job.subtitle_link" 
+                    target="_blank" 
+                    rel="noopener noreferrer">{{ job.subtitle }}</a>
                 <span
-                  v-if="job.subtitle"
+                  v-else-if="job.subtitle"
                   class="border-top border-start border-end px-2"
                 >
                   {{ job.subtitle }}
@@ -487,6 +505,11 @@ const props = defineProps({
 </template>
 
 <style scoped>
+
+a {
+  color: white;
+}
+
 .resume-header {
   font-size: 13px;
 }

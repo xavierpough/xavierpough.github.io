@@ -75,11 +75,24 @@ const resume = {
     "Mentioned on Wall Street Journal"
   ],
   experiences: [
+    {
+      title: "Software Engineer - UI Developer",
+      subtitle: "Inspire Leadership Network",
+      subtitle_link: "https://inspireleadershipnetwork.com/",
+      role: "Remote",
+      duration: "Apr 2025 - Present",
+      details: [
+        "Developed responsive, user-centric interfaces using HTML, CSS, and JavaScript, ensuring cross-browser and cross-device compatibility.",
+        "Translated design mockups and wireframes into high-quality, production-ready code in close collaboration with designers and creative leadership.",
+        "Optimized front-end applications for performance, scalability, accessibility, and SEO using industry best practices."
+      ],
+    },
   {
       title: "Specialist",
       subtitle: "Apple Inc.",
+      subtitle_link: "https://www.apple.com/",
       role: "Atlanta, GA",
-      duration: "Aug 2024 - Present",
+      duration: "Aug 2024 - Apr 2025",
       details: [
         "Provided technical support and customer service, resolving issues with a 95% satisfaction rate.",
         "Assisted customers in diagnosing and resolving technical issues with Apple devices, ensuring satisfaction while maintaining a focus on technical accuracy.",
@@ -89,6 +102,7 @@ const resume = {
     {
       title: "Software Engineer",
       subtitle: "Telrite Holdings",
+      subtitle_link: "https://telrite.com/",
       role: "Atlanta, GA",
       duration: "Aug 2021 - July 2024",
       details: [
@@ -100,6 +114,7 @@ const resume = {
     {
       title: "UI Engineer & Designer",
       subtitle: "Freelance",
+      subtitle_link: "https://www.xavierpough.com/",
       role: "Remote",
       duration: "Dec 2020 - Present",
       details: [
@@ -111,6 +126,7 @@ const resume = {
     {
       title: "Software Engineer Intern - Frontend",
       subtitle: "Custom Development Solutions",
+      subtitle_link: "https://cdsfunds.com/",
       role: "Charleston, SC",
       duration: "May 2019 - May 2020",
       details: [

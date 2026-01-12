@@ -10,6 +10,7 @@ const resume = {
   name: "Xavier Pough",
   location: "Atlanta, GA",
   email: "xavierpough@gmail.com",
+  play_link: "https://youtu.be/8KyCkyxd8HM?si=a794iTSVYnoSTh9U",
   number: "+1-803-477-5474",
   imdb: "https://www.imdb.com/name/nm14567587/",
   agent: "East Coast Talent",
