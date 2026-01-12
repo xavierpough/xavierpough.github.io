@@ -106,7 +106,6 @@ const props = defineProps({
             <i class="fa-solid fa-circle-play"></i> Play
           </button>
 
-
               <a v-if="resume.type === 'Actors'"
                 style="text-decoration: none;"
                 :href="resume.play_link"
